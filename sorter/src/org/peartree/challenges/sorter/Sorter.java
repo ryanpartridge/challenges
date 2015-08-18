@@ -1,4 +1,5 @@
 package org.peartree.challenges.sorter;
+import java.util.Random;
 /*
  * Reverser challenge
  * 
@@ -10,9 +11,10 @@ public class Sorter
     
     public Sorter()
     {
+        Random r = new Random(System.currentTimeMillis());
         for (int i = 0; i < values.length; ++i)
         {
-            values[i] = i;
+            values[i] = r.nextInt(100);
         }
     }
 
